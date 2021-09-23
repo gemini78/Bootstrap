@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;    
+}
+.pixel {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 1px solid white;
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 10px;
+}
