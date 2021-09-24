@@ -1,14 +1,84 @@
 *{
     box-sizing: border-box;    
 }
-.pixel {
+
+body {
+    position: relative;
+}
+
+.pixel {        
     width: 100px;
     height: 100px;
     background-color: red;
     border: 1px solid white;
+    animation-duration: 10s;
+    animation-name: colors;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    transition:left .2s ease-out;
 }
 
-.container {
-    margin: 0 auto;
+.container {    
     margin-top: 10px;
+    transform: scale(0.5);
 }
+
+.boite {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation-duration: 10s;
+    animation-name: walk;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    transition:left .2s ease-out;
+}
+
+@keyframes walk {
+    from {
+        left: 0px; top:0px;
+    }
+    12.5% {
+        left:100px; top:0px;
+    }
+    25% {
+        left:200px; top:0px
+    }
+    37.5% {
+        left:300px; top:0px
+    }
+    50% {
+        left:400px; top:0px
+    }
+    62.5% {
+        left:500px; top:0px
+    }
+    to {    
+        left:600px; top:0px
+    }
+  }
+
+  @keyframes colors {
+    from {
+        background-color: red;
+    }
+    12.5% {
+        background-color: royalblue;
+    }
+    25% {
+        background-color: saddlebrown;
+    }
+    37.5% {
+        background-color: silver;
+    }
+    50% {
+        background-color: springgreen;
+    }
+    to {
+        background-color: violet;
+    }
+  }
